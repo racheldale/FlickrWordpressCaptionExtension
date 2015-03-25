@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Flickr Wordpress generator",
+  "description": "On a Flickr photo's page, generates Wordpress caption markup to
+      embed an image with the title as the caption and a link to the photo on flickr. 
+      Currently only works for size 640",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+ Author: Rachel Dale
+ Page shown whe Flickr Wordpress extension is clicked.
+ -->
+<html>
+  <head>
+    <title>Flickr Wordpress extension</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        padding: 10px;
+        width: 500px;
+      }
+      #result {
+        background-color: lightgrey;
+        font-family: Courier, 'New Courier', monospace;
+        font-size: 10pt;
+        margin: 10px 0;
+        padding: 10px;
+        word-break: break-word;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h3>Wordpress image code generator</h3>
+
+    <!-- Shown when this extension cannot be used because page is not Flickr. -->
+    <div id="invalid-msg">This extension can only be used from a Flickr photo page.</div>
+
+    <!-- Extension content. -->
+    <div id="generate-content" hidden>
+      <button class="btn btn-default" id="generate">Generate</button>
+      <div id="outer-result" hidden>
+        <pre id="result"></pre>
+        <p>Use Ctrl-C to copy to clipboard.</p>
+      </div>
+    </div>
+  </body>
+</html>
